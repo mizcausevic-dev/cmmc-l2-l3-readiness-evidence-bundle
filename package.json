@@ -1,0 +1,17 @@
+{
+  "name": "cmmc-l2-l3-readiness-evidence-bundle",
+  "version": "0.1.0",
+  "description": "DefenseTech evidence-bundle scaffolding for CMMC 2.0 L2 / L3 + NIST SP 800-171 r2 + NIST SP 800-172 enhanced security requirements + DFARS 252.204-7019/7020/7021 self-assessment + SPRS scoring. 14 NIST 800-171 control families + 4 CMMC-program-specific families = 18 families covering 48 evidence kinds.",
+  "type": "module",
+  "main": "src/index.mjs",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "validate": "node src/validate.mjs",
+    "build:examples": "node src/build-examples.mjs"
+  },
+  "dependencies": { "ajv": "^8.17.1", "ajv-formats": "^3.0.1" },
+  "license": "MIT",
+  "homepage": "https://github.com/mizcausevic-dev/cmmc-l2-l3-readiness-evidence-bundle",
+  "repository": { "type": "git", "url": "git+https://github.com/mizcausevic-dev/cmmc-l2-l3-readiness-evidence-bundle.git" },
+  "keywords": ["defensetech", "cmmc", "cmmc-2-0", "dfars", "nist-800-171", "nist-800-172", "sprs", "c3pao", "kinetic-gain-protocol-suite"]
+}

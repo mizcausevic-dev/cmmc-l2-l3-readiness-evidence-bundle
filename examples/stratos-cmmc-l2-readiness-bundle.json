@@ -1,0 +1,460 @@
+{
+  "bundle_id": "STRATOS-CMMC-L2-2026Q4",
+  "schema_version": "0.1",
+  "generated_at": "2026-11-15T10:00:00Z",
+  "contractor": {
+    "cage_code_tokenized": "tok_cage_STRATOS_AERO_1A2B3",
+    "duns_tokenized": "tok_duns_STRATOS_AERO_998877665",
+    "primary_cui_categorizations_in_scope": [
+      "CUI-BASIC",
+      "CUI-SPECIFIED-NOFORN"
+    ],
+    "ai_systems_in_scope": [
+      {
+        "name": "VendorD GuardianAI v3.x",
+        "role": "RFP analytics + technical-data-package screening",
+        "ai_tool_card_url": "https://vendord-guardianai.example/.well-known/ai-tool-cards/guardianai-3.x.json"
+      }
+    ]
+  },
+  "assessment": {
+    "target_cmmc_level": "L2",
+    "assessment_mode": "c3pao-assessment",
+    "dfars_clauses_in_scope": [
+      "dfars-252-204-7012",
+      "dfars-252-204-7019",
+      "dfars-252-204-7020",
+      "dfars-252-204-7021"
+    ],
+    "target_sprs_score_floor": 88
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev-001",
+      "control_family": "ac-access-control",
+      "evidence_kind": "system-security-plan-section",
+      "outcome": "satisfied",
+      "control_id": "AC.L2-3.1.1",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-002",
+      "control_family": "ac-access-control",
+      "evidence_kind": "mfa-enforcement-evidence",
+      "outcome": "satisfied",
+      "control_id": "AC.L2-3.1.20",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-003",
+      "control_family": "at-awareness-and-training",
+      "evidence_kind": "training-record",
+      "outcome": "satisfied",
+      "control_id": "AT.L2-3.2.1",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-004",
+      "control_family": "au-audit-and-accountability",
+      "evidence_kind": "audit-log-extract",
+      "outcome": "satisfied",
+      "control_id": "AU.L2-3.3.1",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-005",
+      "control_family": "cm-configuration-management",
+      "evidence_kind": "configuration-baseline",
+      "outcome": "satisfied",
+      "control_id": "CM.L2-3.4.1",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-006",
+      "control_family": "ia-identification-and-authentication",
+      "evidence_kind": "fips-140-validated-crypto-evidence",
+      "outcome": "satisfied",
+      "control_id": "IA.L2-3.5.10",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-007",
+      "control_family": "ir-incident-response",
+      "evidence_kind": "incident-tabletop-after-action",
+      "outcome": "satisfied",
+      "control_id": "IR.L2-3.6.3",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-008",
+      "control_family": "ir-incident-response",
+      "evidence_kind": "cyber-incident-72-hour-report-copy",
+      "outcome": "satisfied",
+      "control_id": "IR.L2-3.6.1",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ],
+      "notes": "Filed via dibnet.dod.mil within 72-hour window for STRATOS-DFARS-2026-0011 event"
+    },
+    {
+      "evidence_id": "ev-009",
+      "control_family": "ma-maintenance",
+      "evidence_kind": "policy-document",
+      "outcome": "satisfied",
+      "control_id": "MA.L2-3.7.1",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-010",
+      "control_family": "mp-media-protection",
+      "evidence_kind": "media-sanitization-record",
+      "outcome": "satisfied",
+      "control_id": "MP.L2-3.8.3",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-011",
+      "control_family": "pe-physical-protection",
+      "evidence_kind": "policy-document",
+      "outcome": "satisfied",
+      "control_id": "PE.L2-3.10.1",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-012",
+      "control_family": "ps-personnel-security",
+      "evidence_kind": "personnel-screening-attestation",
+      "outcome": "satisfied",
+      "control_id": "PS.L2-3.9.1",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-013",
+      "control_family": "ra-risk-assessment",
+      "evidence_kind": "risk-assessment-report",
+      "outcome": "satisfied",
+      "control_id": "RA.L2-3.11.1",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-014",
+      "control_family": "ca-security-assessment",
+      "evidence_kind": "ssp-scope-diagram",
+      "outcome": "satisfied",
+      "control_id": "CA.L2-3.12.4",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-015",
+      "control_family": "sc-system-and-communications-protection",
+      "evidence_kind": "boundary-protection-architecture-diagram",
+      "outcome": "satisfied",
+      "control_id": "SC.L2-3.13.1",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-016",
+      "control_family": "sc-system-and-communications-protection",
+      "evidence_kind": "encryption-configuration-evidence",
+      "outcome": "satisfied",
+      "control_id": "SC.L2-3.13.11",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-017",
+      "control_family": "si-system-and-information-integrity",
+      "evidence_kind": "vulnerability-scan-result",
+      "outcome": "partially-satisfied",
+      "control_id": "SI.L2-3.14.1",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ],
+      "poam_ref": "POAM-2026-014",
+      "notes": "3 medium CVEs open; remediation by 2027-01-15 per POA&M"
+    },
+    {
+      "evidence_id": "ev-018",
+      "control_family": "si-system-and-information-integrity",
+      "evidence_kind": "patch-management-report",
+      "outcome": "satisfied",
+      "control_id": "SI.L2-3.14.4",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-019",
+      "control_family": "cmmc-program-management",
+      "evidence_kind": "policy-document",
+      "outcome": "satisfied",
+      "control_id": "PMP-001",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ],
+      "notes": "Designated Senior Information Security Officer + CMMC Compliance Lead"
+    },
+    {
+      "evidence_id": "ev-020",
+      "control_family": "cmmc-poam-management",
+      "evidence_kind": "poam-entry",
+      "outcome": "satisfied",
+      "control_id": "PMP-002",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-021",
+      "control_family": "cmmc-sprs-scoring",
+      "evidence_kind": "sprs-score-export",
+      "outcome": "satisfied",
+      "control_id": "PMP-003",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ],
+      "notes": "Self-attested score: 92/110; uploaded to SPRS 2026-10-30"
+    },
+    {
+      "evidence_id": "ev-022",
+      "control_family": "cmmc-sprs-scoring",
+      "evidence_kind": "sprs-self-attestation-letter",
+      "outcome": "satisfied",
+      "control_id": "PMP-004",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-023",
+      "control_family": "cmmc-c3pao-assessment-artifacts",
+      "evidence_kind": "c3pao-readiness-letter",
+      "outcome": "satisfied",
+      "control_id": "PMP-005",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-024",
+      "control_family": "ac-access-control",
+      "evidence_kind": "ai-tool-control-attestation",
+      "outcome": "satisfied",
+      "control_id": "AC.L2-3.1.2",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ],
+      "notes": "GuardianAI v3.x access restricted to US-person-verified users via SAML+conditional access"
+    },
+    {
+      "evidence_id": "ev-025",
+      "control_family": "si-system-and-information-integrity",
+      "evidence_kind": "ai-tool-output-spot-check",
+      "outcome": "satisfied",
+      "control_id": "SI.L2-3.14.6",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-026",
+      "control_family": "sc-system-and-communications-protection",
+      "evidence_kind": "non-cui-segregation-evidence",
+      "outcome": "satisfied",
+      "control_id": "SC.L2-3.13.13",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-027",
+      "control_family": "sc-system-and-communications-protection",
+      "evidence_kind": "enclave-boundary-evidence",
+      "outcome": "satisfied",
+      "control_id": "SC.L2-3.13.5",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-028",
+      "control_family": "sc-system-and-communications-protection",
+      "evidence_kind": "shared-responsibility-evidence-aws-govcloud-azure-government",
+      "outcome": "satisfied",
+      "control_id": "PMP-006",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-029",
+      "control_family": "ac-access-control",
+      "evidence_kind": "third-party-app-allowlist-snapshot",
+      "outcome": "satisfied",
+      "control_id": "AC.L2-3.1.21",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-030",
+      "control_family": "ra-risk-assessment",
+      "evidence_kind": "supply-chain-screen-result",
+      "outcome": "satisfied",
+      "control_id": "RA.L2-3.11.2",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-031",
+      "control_family": "mp-media-protection",
+      "evidence_kind": "controlled-technical-data-handling-record",
+      "outcome": "satisfied",
+      "control_id": "MP.L2-3.8.6",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-032",
+      "control_family": "ac-access-control",
+      "evidence_kind": "us-person-status-verification-record",
+      "outcome": "satisfied",
+      "control_id": "AC.L2-3.1.5",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-033",
+      "control_family": "cmmc-program-management",
+      "evidence_kind": "msp-shared-responsibility-matrix",
+      "outcome": "satisfied",
+      "control_id": "PMP-007",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    },
+    {
+      "evidence_id": "ev-034",
+      "control_family": "ca-security-assessment",
+      "evidence_kind": "external-service-provider-fedramp-evidence",
+      "outcome": "satisfied",
+      "control_id": "CA.L2-3.12.1",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ],
+      "notes": "Azure Government FedRAMP High authorization referenced for CUI processing tier"
+    },
+    {
+      "evidence_id": "ev-035",
+      "control_family": "mp-media-protection",
+      "evidence_kind": "cui-marking-spot-check",
+      "outcome": "satisfied",
+      "control_id": "MP.L2-3.8.4",
+      "collected_at": "2026-11-15T10:00:00Z",
+      "source": "stratos-grc-prod",
+      "applies_to_levels": [
+        "L2"
+      ]
+    }
+  ]
+}

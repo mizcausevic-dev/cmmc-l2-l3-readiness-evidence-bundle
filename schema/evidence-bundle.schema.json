@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.kineticgain.com/cmmc-l2-l3-readiness-evidence-bundle/v0.1",
+  "title": "CMMC L2/L3 Readiness Evidence Bundle",
+  "type": "object",
+  "required": ["bundle_id", "schema_version", "contractor", "assessment", "evidence"],
+  "additionalProperties": false,
+  "properties": {
+    "bundle_id": { "type": "string", "minLength": 1 },
+    "schema_version": { "const": "0.1" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "contractor": {
+      "type": "object",
+      "required": ["cage_code_tokenized", "primary_cui_categorizations_in_scope"],
+      "additionalProperties": false,
+      "properties": {
+        "cage_code_tokenized": { "type": "string" },
+        "duns_tokenized": { "type": "string" },
+        "primary_cui_categorizations_in_scope": {
+          "type": "array", "minItems": 1,
+          "items": { "enum": ["PUBLIC", "CUI-BASIC", "CUI-SPECIFIED", "CUI-SPECIFIED-NOFORN", "CONTROLLED-NOFORN", "CLASSIFIED-CONFIDENTIAL", "CLASSIFIED-SECRET", "CLASSIFIED-TOP-SECRET", "SCI"] }
+        },
+        "ai_systems_in_scope": { "type": "array", "items": { "type": "object" } }
+      }
+    },
+    "assessment": {
+      "type": "object",
+      "required": ["target_cmmc_level", "assessment_mode", "dfars_clauses_in_scope"],
+      "additionalProperties": false,
+      "properties": {
+        "target_cmmc_level": { "enum": ["L1", "L2", "L3"] },
+        "assessment_mode": { "enum": ["self-assessment", "c3pao-assessment", "dibcac-assessment"] },
+        "dfars_clauses_in_scope": {
+          "type": "array", "minItems": 1,
+          "items": { "enum": ["dfars-252-204-7012", "dfars-252-204-7019", "dfars-252-204-7020", "dfars-252-204-7021"] }
+        },
+        "target_sprs_score_floor": { "type": "integer", "minimum": -203, "maximum": 110 }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/evidenceItem" }
+    }
+  },
+  "$defs": {
+    "evidenceItem": {
+      "type": "object",
+      "required": ["evidence_id", "control_family", "evidence_kind", "collected_at", "source", "outcome"],
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": { "type": "string", "minLength": 1 },
+        "control_family": {
+          "enum": [
+            "ac-access-control", "at-awareness-and-training", "au-audit-and-accountability",
+            "cm-configuration-management", "ia-identification-and-authentication",
+            "ir-incident-response", "ma-maintenance", "mp-media-protection",
+            "pe-physical-protection", "ps-personnel-security", "ra-risk-assessment",
+            "ca-security-assessment", "sc-system-and-communications-protection",
+            "si-system-and-information-integrity",
+            "cmmc-program-management", "cmmc-poam-management", "cmmc-sprs-scoring",
+            "cmmc-c3pao-assessment-artifacts"
+          ]
+        },
+        "control_id": { "type": "string", "minLength": 1 },
+        "evidence_kind": { "enum": [
+          "system-security-plan-section",
+          "policy-document",
+          "procedure-document",
+          "training-record",
+          "log-export",
+          "configuration-baseline",
+          "audit-log-extract",
+          "vulnerability-scan-result",
+          "incident-response-test-result",
+          "media-sanitization-record",
+          "personnel-screening-attestation",
+          "risk-assessment-report",
+          "boundary-protection-architecture-diagram",
+          "encryption-configuration-evidence",
+          "patch-management-report",
+          "ai-tool-control-attestation",
+          "ai-tool-output-spot-check",
+          "poam-entry",
+          "poam-closure-evidence",
+          "sprs-score-export",
+          "sprs-self-attestation-letter",
+          "cui-marking-spot-check",
+          "cui-spillage-incident-record",
+          "c3pao-assessment-report",
+          "c3pao-readiness-letter",
+          "dibcac-medium-confidence-score",
+          "dibcac-high-confidence-score",
+          "non-cui-segregation-evidence",
+          "enclave-boundary-evidence",
+          "msp-shared-responsibility-matrix",
+          "external-service-provider-fedramp-evidence",
+          "incident-tabletop-after-action",
+          "cyber-incident-72-hour-report-copy",
+          "fci-only-control-attestation",
+          "supply-chain-screen-result",
+          "controlled-technical-data-handling-record",
+          "deemed-export-screening-record",
+          "us-person-status-verification-record",
+          "fso-cosign-record",
+          "scif-physical-control-evidence",
+          "ddtc-registration-evidence",
+          "bis-license-application-evidence",
+          "ear-eccn-classification-evidence",
+          "itar-license-application-evidence",
+          "third-party-app-allowlist-snapshot",
+          "mfa-enforcement-evidence",
+          "fips-140-validated-crypto-evidence",
+          "ssp-scope-diagram",
+          "shared-responsibility-evidence-aws-govcloud-azure-government"
+        ] },
+        "collected_at": { "type": "string", "format": "date-time" },
+        "source": { "type": "string", "minLength": 1 },
+        "outcome": { "enum": ["satisfied", "partially-satisfied", "not-satisfied", "not-applicable", "planned-poam"] },
+        "applies_to_levels": {
+          "type": "array", "minItems": 1,
+          "items": { "enum": ["L1", "L2", "L3"] }
+        },
+        "poam_ref": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}
